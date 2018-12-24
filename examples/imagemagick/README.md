@@ -22,7 +22,7 @@ scar init -f scar-imagemagick.yaml
 2. Upload a file to the S3 bucket
 
 ```sh
-scar put -b scar-imagemagick-fm -bf scar-imagemagick/input -p homer.png
+scar put -b scar-imagemagick-fm -bf scar-imagemagick/input -p homer1.png
 ```
 
 The converted image to grayscale will be available in `s3://scar-test/lambda-imagemagick/output/$REQUEST_ID/homer.png`

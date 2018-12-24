@@ -54,7 +54,7 @@ def get_logger():
     if is_variable_in_environment('LOG_LEVEL'):
         logger.setLevel(get_environment_variable('LOG_LEVEL'))
     else:
-        logger.setLevel('INFO')
+        logger.setLevel('DEBUG')
     return logger
 
 def join_paths(*paths):
