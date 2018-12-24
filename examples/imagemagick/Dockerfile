@@ -2,6 +2,8 @@ FROM bitnami/minideb:jessie
 
 LABEL maintainer=Germán Moltó - gmolto@dsic.upv.es
 
+ENV AWS_DEFAULT_REGION us-west-2
+
 RUN install_packages imagemagick
 
 #Required to avoid relying on symlinks, which fails when using udocker and the F1 execution mode on AWS Lambda.
