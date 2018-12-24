@@ -68,7 +68,7 @@ class S3():
         output_files_path = utils.get_all_files_in_directory(self.lambda_instance.output_folder)
         logger.debug("UPLOADING FILES {0}".format(output_files_path))
         for file_path in output_files_path:
-            file_name = file_path.replace("{0}/".format(self.lambda_instance.output_folder), "")
+            file_name = file_path.replace("{0}/".format(self.lambda_instance.output_folder), "").rstrip('\r\n')
             if bucket_folder:
                 file_key = self.get_file_key(folder=bucket_folder, file_name=file_name)
             else:
