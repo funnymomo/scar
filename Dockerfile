@@ -21,7 +21,7 @@ RUN apt-get update && apt-get install -y \
     python3-pip \
  && apt-get clean \
  && rm -rf /var/lib/apt/lists/*
-RUN git clone https://github.com/grycap/scar
+RUN git clone https://github.com/funnymomo/scar
 WORKDIR /scar
 RUN pip3 install -r requirements.txt \
  && pip3 install pyinstaller urllib3 configparser
