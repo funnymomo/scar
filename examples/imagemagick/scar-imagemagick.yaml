@@ -3,4 +3,4 @@ functions:
     image: grycap/imagemagick
     init_script: grayify-image.sh
     s3:
-      input_bucket: scar-imagemagick
+      input_bucket: scar-imagemagick-fm
