@@ -22,7 +22,7 @@
 # 3. The output image will be stored /tmp/$REQUEST_ID/output, and will be
 #    automatically uploaded by the Lambda function to the output folder of the S3 bucket.
 #    
-
+echo "SCRIPT: Umesh"
 echo "SCRIPT: Invoked Image Grayifier. File available in $SCAR_INPUT_FILE"
 FILE_NAME=`basename $SCAR_INPUT_FILE`
 OUTPUT_FILE=$SCAR_OUTPUT_DIR/$FILE_NAME
