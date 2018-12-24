@@ -31,7 +31,10 @@ class BotoClient(object):
     @utils.lazy_property
     def client(self):
         session = boto3.Session(**self.session_args)
-        self.client_args['config'] = botocore.config.Config(region_name=region,read_timeout=botocore_client_read_timeout)
+        # print("Region {0}".format(region))
+        print(region)
+        # print(ce.response['Error']['Message'])        
+        self.client_args['config'] = botocore.config.Config(region_name='us-west-2',read_timeout=botocore_client_read_timeout)
         return session.client(self.boto_client_name, **self.client_args)
     
     def get_access_key(self):
