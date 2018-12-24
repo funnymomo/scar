@@ -48,6 +48,9 @@ class S3():
         logger.info("Downloading item from bucket '{0}' with key '{1}'".format(self.input_bucket, self.file_key))
         if not os.path.isdir(self.file_download_path):
             os.makedirs(os.path.dirname(self.file_download_path), exist_ok=True)
+        logger.info("Will download file '{0}' from bucket '{1}' in path '{2}'".format(self.file_key, 
+                                                                                               self.input_bucket,
+                                                                                               self.file_download_path))            
         with open(self.file_download_path, 'wb') as data:
             self.client.download_fileobj(self.input_bucket, self.file_key, data)
         logger.info("Successful download of file '{0}' from bucket '{1}' in path '{2}'".format(self.file_key, 
