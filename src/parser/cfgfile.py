@@ -23,7 +23,7 @@ import src.logger as logger
 default_cfg = { 
     "aws" : {
         "boto_profile" : "default",
-        "region" : "us-east-1",
+        "region" : "us-west-2",
         "execution_mode": "lambda",        
         "iam" : {"role" : ""},
         "lambda" : {
